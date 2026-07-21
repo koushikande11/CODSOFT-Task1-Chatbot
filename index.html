@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chatbot</title>
+</head>
+<body>
+    <h1>My AI Chatbot</h1>
+
+    <input type="text" id="userInput" placeholder="Type your message">
+    <button onclick="reply()">Send</button>
+
+    <p id="output"></p>
+
+    <script>
+        function reply() {
+            let input = document.getElementById("userInput").value.toLowerCase();
+            let output = document.getElementById("output");
+
+            if (input === "hello") {
+                output.innerHTML = "Bot: Hello! How are you?";
+            } else if (input === "hi") {
+                output.innerHTML = "Bot: Hi! Nice to meet you.";
+            } else if (input === "how are you") {
+                output.innerHTML = "Bot: I am fine. How are you?";
+            } else if (input === "bye") {
+                output.innerHTML = "Bot: Goodbye! Have a nice day.";
+            } else {
+                output.innerHTML = "Bot: Sorry, I don't understand.";
+            }
+        }
+    </script>
+</body>
+</html>
